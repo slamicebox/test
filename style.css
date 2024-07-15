@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    height: 50px;
+    background-color: #0b54a8;
+    color: #fff;
+    align-items: center;
+}
+
+nav > div {
+    width: 100px;
+    background-color: black;
+    text-align: center;
+}
+
+nav ul {
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#home {
+    height: 300px;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+h2{
+    text-align: center;
+}
+
+#home > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.transparent-bg{
+    background-color: rgba(0, 0 ,0, 0.6);
+}
+
+#products > div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#products > div > article {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    box-shadow: 0px 0px 10px #777;
+}
+
+#products > div > article > div{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#products > div > article h3,
+#products > div > article p{
+    text-align: center;
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+    nav{
+        flex-direction: column;
+        height: 100%;
+    }
+    nav > ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-top: 10px;
+    }
+    nav li:last-child {
+        margin-bottom: 10px;
+    }
+    #products > div{
+        flex-wrap: wrap;
+    }
+}
+
+/* tablets */
+@media screen and (min-width:481px) and (max-width:768px) {
+    #products > div {
+        flex-wrap: wrap;
+    }
+}
+
+/* laptops */
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+}
